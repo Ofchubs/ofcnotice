@@ -2,7 +2,7 @@ name: Run Notice Scraper Bot
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # প্রতি ১৫ মিনিট পরপর চলবে
+    - cron: '*/30 * * * *'  # প্রতি ৩০ মিনিট পরপর চলবে
   workflow_dispatch:        # গিটহাব থেকে ম্যানুয়ালি রান করার বাটন
 
 permissions:
