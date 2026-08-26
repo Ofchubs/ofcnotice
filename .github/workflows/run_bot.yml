@@ -2,7 +2,8 @@ name: Run Notice Scraper Bot
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # প্রতি ৩০ মিনিট পরপর চলবে
+    # বাংলাদেশ সময় সকাল 7:30 AM থেকে রাত 2:00 AM (UTC 1:30 AM - 8:00 PM) পর্যন্ত প্রতি ৩০ মিনিট পর পর চলবে
+    - cron: '30,0 1-20 * * *'
   workflow_dispatch:        # গিটহাব থেকে ম্যানুয়ালি রান করার বাটন
 
 permissions:
@@ -39,4 +40,3 @@ jobs:
           git add sent_notices.txt
           git commit -m "chore: update sent notices log [skip ci]" || exit 0
           git push
-
